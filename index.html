@@ -4,49 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Karima El Mouden</title>
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <style>
-        /* CSS INTÉGRÉ */
         :root {
-            --primary-rose: #ff4d94;   /* Rose vif */
-            --secondary-mauve: #9d50bb; /* Mauve / Violet */
-            --dark-purple: #2d0a31;    /* Fond sombre */
-            --bg-light: #fdf6fb;       /* Fond clair rosé */
-            --text-dark: #4a148c;      /* Texte violet foncé */
+            --primary-rose: #ff4d94;
+            --secondary-mauve: #9d50bb;
+            --dark-purple: #2d0a31;
+            --bg-light: #fdf6fb;
+            --text-dark: #4a148c;
         }
 
         body {
             font-family: 'Poppins', 'Segoe UI', sans-serif;
-            line-height: 1.6;
             margin: 0;
-            color: var(--text-dark);
             background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
         }
 
         .container {
             max-width: 900px;
-            margin: 20px auto;
+            margin: auto;
             padding: 0 20px;
         }
 
-        /* En-tête */
+        /* HEADER */
         header {
             background: linear-gradient(135deg, var(--secondary-mauve), var(--primary-rose));
             color: white;
-            padding: 50px 0;
-            text-align: center;
-            border-bottom: 6px solid #fff;
+            padding: 60px 0;
+            border-bottom: 6px solid white;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        header h1 { margin: 0; font-size: 2.8em; text-transform: uppercase; letter-spacing: 2px; }
-        .tagline { font-size: 1.3em; font-weight: 300; opacity: 0.9; margin-top: 10px; }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
 
-        .contact-info { margin-top: 20px; }
-        .contact-info span { margin: 0 15px; font-size: 0.95em; display: inline-block; }
+        .profile-photo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
 
-        /* Sections */
+        .header-text {
+            text-align: left;
+            max-width: 600px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            font-weight: 300;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info span {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 0.95em;
+        }
+
+        /* SECTIONS */
         h2 {
             color: var(--secondary-mauve);
             border-bottom: 3px solid var(--primary-rose);
@@ -66,11 +106,17 @@
             transition: transform 0.3s ease;
         }
 
-        .card:hover { transform: scale(1.02); }
+        .card:hover {
+            transform: scale(1.02);
+        }
 
-        .date { color: var(--primary-rose); font-weight: bold; font-size: 0.9em; }
+        .date {
+            color: var(--primary-rose);
+            font-weight: bold;
+            font-size: 0.9em;
+        }
 
-        /* Compétences */
+        /* SKILLS */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -87,13 +133,11 @@
             border: 2px solid var(--secondary-mauve);
             font-weight: 600;
             transition: all 0.3s ease;
-            cursor: default;
         }
 
         .skill-tag:hover {
             background: var(--secondary-mauve);
             color: white;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
         }
 
         footer {
@@ -104,89 +148,125 @@
             margin-top: 60px;
         }
 
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-text {
+                text-align: center;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Karima El Mouden</h1> [cite: 1]
-            <p class="tagline">Étudiante en Marketing Digital & Commercial</p> [cite: 2]
+<header>
+    <div class="container header-content">
+
+        <div class="profile-photo">
+            <img src="photo.jpg" alt="Photo de Karima El Mouden">
+        </div>
+
+        <div class="header-text">
+            <h1>Karima El Mouden</h1>
+            <p class="tagline">Étudiante en Marketing Digital & Commercial</p>
+
             <div class="contact-info">
-                <span><i class="fas fa-envelope"></i> elmoudenkarima2006@gmail.com</span> [cite: 4]
-                <span><i class="fas fa-phone"></i> +212 6 98 82 48 72</span> [cite: 5]
-                <span><i class="fas fa-map-marker-alt"></i> Kénitra, Maroc</span> [cite: 3]
+                <span><i class="fas fa-envelope"></i> elmoudenkarima2006@gmail.com</span>
+                <span><i class="fas fa-phone"></i> +212 6 98 82 48 72</span>
+                <span><i class="fas fa-map-marker-alt"></i> Kénitra, Maroc</span>
             </div>
         </div>
-    </header>
 
-    <div class="container">
-        <section id="bio">
-            <h2><i class="fas fa-user-circle"></i> Profil</h2>
-            <p>Étudiante en 2ème année Marketing Digital et Commercial, passionnée par le marketing data-driven, la data science et la création de solutions numériques. Autonome, créative et dotée d'un bon esprit d'analyse.</p> [cite: 7, 8]
-        </section>
-
-        <section id="education">
-            <h2><i class="fas fa-graduation-cap"></i> Formation</h2>
-            <div class="card">
-                <h3>Marketing Digital et Commercial - 2ème année</h3> [cite: 10]
-                <p class="date">2024 — 2026</p> [cite: 10]
-                <p>École Supérieure de Technologie de Salé - Université Mohammed V de Rabat</p> [cite: 11]
-            </div>
-            <div class="card">
-                <h3>Baccalauréat Sciences Économiques et Gestion</h3> [cite: 12]
-                <p class="date">2023 — 2024</p> [cite: 12]
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2><i class="fas fa-star"></i> Compétences</h2>
-            <div class="skills-grid" id="skills-list">
-                </div>
-        </section>
-
-        <section id="experience">
-            <h2><i class="fas fa-hands-helping"></i> Expérience Associative</h2>
-            <div class="card">
-                <h3>Présidente d'un club universitaire</h3> [cite: 18]
-                <p class="date">En cours | Salé</p> [cite: 11, 18]
-                <ul>
-                    <li>Organisation d'ateliers de développement personnel et design graphique.</li> [cite: 18]
-                    <li>Animation d'activités culturelles (musique, danse, café littéraire).</li> [cite: 18]
-                    <li>Gestion d'équipe et leadership.</li> [cite: 19]
-                </ul>
-            </div>
-        </section>
     </div>
+</header>
 
-    <footer>
-        <p>Conçu par Karima El Mouden &copy; 2024</p>
-    </footer>
+<div class="container">
 
-    <script>
-        /* JS INTÉGRÉ */
-        document.addEventListener('DOMContentLoaded', function() {
-            // Vos compétences issues de votre CV
-            const mySkills = [
-                "Marketing Digital", "Marketing de Contenu", "Analyse Client", 
-                "Data Science", "Python", "Git & GitHub", 
-                "HTML/CSS", "Segmentation", "Visualisation Data"
-            ]; [cite: 14]
+    <section id="bio">
+        <h2><i class="fas fa-user-circle"></i> Profil</h2>
+        <p>
+            Étudiante en 2ème année Marketing Digital et Commercial, passionnée par le marketing data-driven,
+            la data science et la création de solutions numériques. Autonome, créative et dotée d’un bon esprit d’analyse.
+        </p>
+    </section>
 
-            const skillsContainer = document.getElementById('skills-list');
-            
-            // Ajout dynamique des compétences
-            mySkills.forEach(skill => {
-                const badge = document.createElement('div');
-                badge.className = 'skill-tag';
-                badge.innerText = skill;
-                skillsContainer.appendChild(badge);
-            });
+    <section id="education">
+        <h2><i class="fas fa-graduation-cap"></i> Formation</h2>
 
-            console.log("CV de Karima chargé avec succès !");
+        <div class="card">
+            <h3>Marketing Digital et Commercial – 2ème année</h3>
+            <p class="date">2024 — 2026</p>
+            <p>École Supérieure de Technologie de Salé – Université Mohammed V de Rabat</p>
+        </div>
+
+        <div class="card">
+            <h3>Baccalauréat Sciences Économiques et Gestion</h3>
+            <p class="date">2023 — 2024</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2><i class="fas fa-star"></i> Compétences</h2>
+        <div class="skills-grid" id="skills-list"></div>
+    </section>
+
+    <section id="experience">
+        <h2><i class="fas fa-hands-helping"></i> Expérience Associative</h2>
+
+        <div class="card">
+            <h3>Présidente d’un club universitaire</h3>
+            <p class="date">En cours | Salé</p>
+            <ul>
+                <li>Organisation d’ateliers de développement personnel et design graphique</li>
+                <li>Animation d’activités culturelles</li>
+                <li>Gestion d’équipe et leadership</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>Conçu par Karima El Mouden © 2024</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const skills = [
+            "Marketing Digital",
+            "Marketing de Contenu",
+            "Analyse Client",
+            "Data Science",
+            "Python",
+            "Git & GitHub",
+            "HTML / CSS",
+            "Segmentation",
+            "Visualisation Data"
+        ];
+
+        const container = document.getElementById("skills-list");
+
+        skills.forEach(skill => {
+            const div = document.createElement("div");
+            div.className = "skill-tag";
+            div.textContent = skill;
+            container.appendChild(div);
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
