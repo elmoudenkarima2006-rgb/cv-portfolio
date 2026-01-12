@@ -58,8 +58,8 @@
         }
 
         .header-text {
-            text-align: left;
             max-width: 600px;
+            text-align: left;
         }
 
         header h1 {
@@ -85,6 +85,37 @@
             margin-right: 15px;
             font-size: 0.95em;
         }
+
+        /* SOCIAL BUTTONS */
+        .social-buttons {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95em;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn.github { background: #24292e; }
+        .btn.github:hover { background: #000; transform: translateY(-3px); }
+
+        .btn.kaggle { background: #20beff; }
+        .btn.kaggle:hover { background: #0aa0d8; transform: translateY(-3px); }
+
+        .btn.cv { background: var(--primary-rose); }
+        .btn.cv:hover { background: #ff1f7a; transform: translateY(-3px); }
 
         /* SECTIONS */
         h2 {
@@ -148,13 +179,8 @@
             margin-top: 60px;
         }
 
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
@@ -162,9 +188,11 @@
                 flex-direction: column;
                 text-align: center;
             }
-
             .header-text {
                 text-align: center;
+            }
+            .social-buttons {
+                justify-content: center;
             }
         }
     </style>
@@ -176,100 +204,4 @@
     <div class="container header-content">
 
         <div class="profile-photo">
-            <img src="maphotos.jpg" alt="Photo de profile Karima El Mouden">
-        </div>
-
-        <div class="header-text">
-            <h1>Karima El Mouden</h1>
-            <p class="tagline">Étudiante en Marketing Digital & Commercial</p>
-
-            <div class="contact-info">
-                <span><i class="fas fa-envelope"></i> elmoudenkarima2006@gmail.com</span>
-                <span><i class="fas fa-phone"></i> +212 6 98 82 48 72</span>
-                <span><i class="fas fa-map-marker-alt"></i> Kénitra, Maroc</span>
-            </div>
-        </div>
-
-    </div>
-</header>
-
-<div class="container">
-
-    <section id="bio">
-        <h2><i class="fas fa-user-circle"></i> Profil</h2>
-        <p>
-            Étudiante en 2ème année Marketing Digital et Commercial, passionnée par le marketing data-driven,
-            la data science et la création de solutions numériques. Autonome, créative et dotée d’un bon esprit d’analyse.
-        </p>
-    </section>
-
-    <section id="education">
-        <h2><i class="fas fa-graduation-cap"></i> Formation</h2>
-
-        <div class="card">
-            <h3>Marketing Digital et Commercial – 2ème année</h3>
-            <p class="date">2024 — 2026</p>
-            <p>École Supérieure de Technologie de Salé – Université Mohammed V de Rabat</p>
-        </div>
-
-        <div class="card">
-            <h3>Baccalauréat Sciences Économiques et Gestion</h3>
-            <p class="date">2023 — 2024</p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2><i class="fas fa-star"></i> Compétences</h2>
-        <div class="skills-grid" id="skills-list"></div>
-    </section>
-
-    <section id="experience">
-        <h2><i class="fas fa-hands-helping"></i> Expérience Associative</h2>
-
-        <div class="card">
-            <h3>Présidente d’un club universitaire</h3>
-            <p class="date">En cours | Salé</p>
-            <ul>
-                <li>Organisation d’ateliers de développement personnel et design graphique</li>
-                <li>Animation d’activités culturelles</li>
-                <li>Gestion d’équipe et leadership</li>
-            </ul>
-        </div>
-    </section>
-
-</div>
-
-<footer>
-    <p>Conçu par Karima El Mouden © 2024</p>
-</footer>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const skills = [
-            "Marketing Digital",
-            "Marketing de Contenu",
-            "Analyse Client",
-            "Data Science",
-            "Python",
-            "Git & GitHub",
-            "HTML / CSS",
-            "Segmentation",
-            "Visualisation Data"
-        ];
-
-        const container = document.getElementById("skills-list");
-
-        skills.forEach(skill => {
-            const div = document.createElement("div");
-            div.className = "skill-tag";
-            div.textContent = skill;
-            container.appendChild(div);
-        });
-    });
-</script>
-
-</body>
-</html>
-
-
-
+            <img src
